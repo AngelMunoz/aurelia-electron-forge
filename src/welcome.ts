@@ -1,5 +1,5 @@
 //import {computedFrom} from 'aurelia-framework';
-import {ipcRenderer} from 'electron';
+import { ipcRenderer } from 'electron';
 
 export class Welcome {
   heading = 'Welcome to the Aurelia Navigation App!';

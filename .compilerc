@@ -1,37 +1,18 @@
 {
   "env": {
     "development": {
-      "application/javascript": {
-        "presets": [
-          ["env", {
-            "targets": {
-              "electron": "1.7"
-            }
-          }]
-        ],
-        "plugins": [
-          "transform-async-to-generator",
-          "transform-decorators-legacy",
-          "transform-class-properties"
-        ],
-        "sourceMaps": "inline"
+      "text/typescript": {
+        "inlineSourceMap": true,
+        "module": "commonjs",
+        "target": "es6",
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true,
+        "emitDecoratorMetadata": true
       }
     },
     "production": {
-      "application/javascript": {
-        "presets": [
-          ["env", {
-            "targets": {
-              "electron": "1.7"
-            }
-          }]
-        ],
-        "plugins": [
-          "transform-async-to-generator",
-          "transform-decorators-legacy",
-          "transform-class-properties"
-        ],
-        "sourceMaps": "none"
+      "text/typescript": {
+        "inlineSourceMap": false
       }
     }
   }

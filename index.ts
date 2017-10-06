@@ -67,16 +67,16 @@ ipcMain.on('print-to-pdf', (event) => {
   const win = BrowserWindow.fromWebContents(event.sender);
 
   win.webContents.printToPDF({}, (error, data) => {
-      if (error) {
-          throw error
-      }
+    if (error) {
+      throw error
+    }
 
-      fs.writeFile(pdfPath, data, (error) => {
-          if (error) {
-              throw error
-          }
-          shell.openExternal('file://' + pdfPath)
-          event.sender.send('wrote-pdf', pdfPath)
-      });
+    fs.writeFile(pdfPath, data, (error) => {
+      if (error) {
+        throw error
+      }
+      shell.openExternal('file://' + pdfPath)
+      event.sender.send('wrote-pdf', pdfPath)
+    });
   });
 });

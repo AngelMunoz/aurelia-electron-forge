@@ -1,3 +1,4 @@
+import "aurelia-bootstrapper";
 export async function configure(aurelia) {
   aurelia.use
     .standardConfiguration()
@@ -12,5 +13,5 @@ export async function configure(aurelia) {
 
   //aurelia.start().then(() => aurelia.setRoot());
   await aurelia.start();
-  aurelia.setRoot('app');
+  aurelia.setRoot('src/app');
 }
