@@ -1,9 +1,9 @@
 import { app, BrowserWindow, ipcMain, shell } from 'electron';
 
 // for PDF printing
-import fs from 'fs';
-import os from 'os';
-import path from 'path';
+import * as fs from 'fs';
+import * as os from 'os';
+import * as path from 'path';
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
